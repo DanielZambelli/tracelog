@@ -4,7 +4,7 @@ services:
   postgres:
     image: 'postgres:13-alpine'
     environment:
-      - POSTGRES_PASSWORD=dev-yyyyyy
+      - POSTGRES_PASSWORD=devpass
 
   server:
     build:
@@ -19,8 +19,8 @@ services:
       - postgres
     environment:
       - PORT=8080
-      - DB_URL=postgresql://postgres:dev-yyyyyy@postgres/postgres
-      - SECRET=dev-xxxxxx
+      - DB_URL=postgresql://postgres:devpass@postgres/postgres
+      - SECRET=devsecret
 
   client:
     build:
