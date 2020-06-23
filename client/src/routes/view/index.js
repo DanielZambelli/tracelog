@@ -30,6 +30,7 @@ class TerminalRoute extends Component {
       <div className='terminal'>
         <Header />
         <TitleOverlay title='recent first' />
+        <div className="spacer"/>
         <TerminalLines
           logs={tracelogs}
           onClick={this.handleClick}

@@ -2,13 +2,14 @@
   background: #383737;
   background-image: linear-gradient(to right, #383737, #5a5959);
   color: #a7a7a7;
-  height: calc(100% - 35px);
+  height: 100%;
   overflow-y: scroll;
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
 
   .titleOverlay{
-    position: relative;
+    position: fixed;
+    top: 35px;
     width: 55px;
     font-size: 10px;
     font-weight: lighter;
@@ -17,6 +18,10 @@
     border-radius: 0px 0px 5px 0px;
     padding: 2px 38px;
     background: #333333;
+  }
+
+  .spacer{
+    height: 40px;
   }
 
   &::-webkit-scrollbar-track{
