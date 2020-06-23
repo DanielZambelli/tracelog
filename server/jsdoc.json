@@ -1,0 +1,21 @@
+{
+  "tags": {
+    "allowUnknownTags": true,
+    "dictionaries": ["jsdoc","closure"]
+  },
+  "source": {
+    "include": [ "." ],
+    "includePattern": ".js$",
+    "excludePattern": "(node_modules/|public_docs|view)"
+  },
+  "plugins": ["plugins/markdown","jsdoc-route-plugin"],
+  "templates": {
+    "cleverLinks": false,
+    "monospaceLinks": false
+  },
+  "opts": {
+  "recurse": true,
+  "destination": "./public/docs/",
+  "template": "view/minami_doc"
+  }
+}
