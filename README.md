@@ -14,6 +14,10 @@ Log drain web service for keeping track of system and event logs.
 * REST API Documentation is published at: http://localhost:8080/docs
 
 ## Stack
-* Node.js, Expressjs, Sequelize/ORM, Postgres, JSDocs, jest, organised into MVC
-* React (Create React App), Redux, Reselect
-* Docker 
+* Database: Postgres
+* Server: Node.js, Expressjs, Sequelize/ORM
+* Documentation: JSDocs
+* Regression testing: Jest
+* Argeitchture: MVC
+* Web Client: React (create-react-app), Redux, Reselect
+* Docker
