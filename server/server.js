@@ -22,7 +22,7 @@ server.post('/auth', verifyBodyKeys(['secret']), require('./controllers/postAuth
 
 /**
  * Creates a log within the service instance.\
- * Requires authorised session @see POST /auth\
+ * Requires authorisation @see POST /auth\
  * Accepts content-type: application/json.\
  * Returns response: 200 OK
  * @namespace POST /api/log
@@ -34,7 +34,7 @@ server.post('/api/log', verifyBodyKeys(['type', 'data', 'cat']), require('./cont
 
 /**
  * Get latest 1500 logs from the service instance ordered by latest first.\
- * Requires authorised session @see POST /auth\
+ * Requires authorisation @see POST /auth\
  * Accepts content-type: application/json.\
  * Returns response: 200 OK with json array of logs
  * @namespace GET /api/log

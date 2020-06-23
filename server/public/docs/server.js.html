@@ -35,45 +35,7 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>// tracelog turned into public project that can be shown as code example
-  // server spun up
-    // routing: DONE
-    // routing middlewear verifying required body: DONE
-    // endpoint for authorizing: DONE
-    // service instance model setup: DONE
-    // routing verify service instance: DONE
-    // get logs from api: DONE
-    // post log to api: DONE
-    // JSDocs for generating api documentation: DONE
-    // docker up: DONE
-    // docker postgresql: DONE
-    // db seeds for development: DONE
-    // test suits added
-    // socket connection
-
-  // client spun up &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;
-    // developer server spun up in docker: DONE
-    // FE login: DONE
-    // FE use node-sass: DONE
-
-    // login page should automatically insert a login secret in developer mode----
-    // login page should redirect to terminal view
-    // login tested with real user
-    // termianl view should fetch latests logs
-    // terminal view should add logs as they appear on the server via sockets
-    // terminal view sidebar fixed
-    // terminal view active line updated to alwaus point at the selected item
-    // terminal view routing added so its possible to open a log by url e.g. /view/3728 &lt;-- would open log with id: 3728
-    // test suits added
-    // production build step added to dockerfile
-    // docker testing
-    // docker compose testing
-    // readme, intro, how spin up, where to access api documentation ::: https://github.com/DanielZambelli/tracelog-demo-log-generator
-    // more seeds, maybe use the
-    // package for git
-    // push to github
-
-const express = require('express')
+            <pre class="prettyprint source linenums"><code>const express = require('express')
 const server = express()
 const verifyBodyKeys = require('./utils/verifyBodyKeys')
 const verifySiid = require('./utils/verifySiid')
@@ -85,7 +47,7 @@ server.use(express.static('public'))
 server.use('/api/*', verifySiid)
 
 /**
- * Verifies the secret and returns a Bearer token allowing subsequent requests to access api resources when Authorization header is set to: Bearer &lt;token>.\
+ * Verifies the secret and returns a Bearer token allowing subsequent requests to access api resources when Authorization header is set to: Bearer token-xxxxxx.\
  * Accepts content-type: application/json.\
  * Returns json response:
  *  * 200 OK { token: xxxxxxxxxx }
@@ -97,7 +59,7 @@ server.post('/auth', verifyBodyKeys(['secret']), require('./controllers/postAuth
 
 /**
  * Creates a log within the service instance.\
- * Requires authorised session @see POST /auth\
+ * Requires authorisation @see POST /auth\
  * Accepts content-type: application/json.\
  * Returns response: 200 OK
  * @namespace POST /api/log
@@ -109,7 +71,7 @@ server.post('/api/log', verifyBodyKeys(['type', 'data', 'cat']), require('./cont
 
 /**
  * Get latest 1500 logs from the service instance ordered by latest first.\
- * Requires authorised session @see POST /auth\
+ * Requires authorisation @see POST /auth\
  * Accepts content-type: application/json.\
  * Returns response: 200 OK with json array of logs
  * @namespace GET /api/log
