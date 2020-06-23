@@ -1,0 +1,52 @@
+.header{
+  background: #4D4D4D;
+  color: #fff;
+  height: 35px;
+  line-height: 35px;
+  user-select: none;
+  font-size: 11px;
+  display: flex;
+  min-width: 800px;
+
+  .logo{
+    letter-spacing: -2px;
+    font-weight: bold;
+    margin-right: 10px;
+    margin-right: 50px;
+    font-size: 16px;
+    padding-left: 8px;
+  }
+
+  .filter{
+    margin-right: 5px;
+
+    .select{
+      padding: 2px;
+      border-radius: 5px;
+      font-size: 11px;
+      background: #636363;
+      border-color: transparent;
+      color: #fff;
+      outline: none;
+    }
+
+    .checkbox__box{ background: #636363; }
+    &__lastDays .select{ min-width: 110px; }
+    &__category .select{ min-width: 180px; }
+    &__type{
+      &--error{ color: #db5a5a; }
+      &--warning{ color: #be9431; }
+      &--message{ color: #b6b6b6; }
+    }
+  }
+
+  .link{
+    cursor: pointer;
+    padding: 0px 8px;
+    opacity: .5;
+    &:hover{ opacity: .8; }
+  }
+
+  .spacer{ flex: 1 1 auto; }
+
+}

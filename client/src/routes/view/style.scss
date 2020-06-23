@@ -1,0 +1,39 @@
+.terminal{
+  background: #383737;
+  background-image: linear-gradient(to right, #383737, #5a5959);
+  color: #a7a7a7;
+  height: calc(100% - 35px);
+  overflow-y: scroll;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+
+  .titleOverlay{
+    position: relative;
+    width: 55px;
+    font-size: 10px;
+    font-weight: lighter;
+    text-align: center;
+    user-select: none;
+    border-radius: 0px 0px 5px 0px;
+    padding: 2px 38px;
+    background: #333333;
+  }
+
+  &::-webkit-scrollbar-track{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 5px;
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar{
+    width: 5px;
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb{
+    border-radius: 5px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #fff;
+  }
+
+}

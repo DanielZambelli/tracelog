@@ -1,0 +1,127 @@
+.typeStyling{
+  &--error{
+    color: #db5a5a;
+  }
+  &--warning{
+    color: #be9431;
+  }
+  &--message{
+    color: #b6b6b6;
+  }
+}
+
+.propLabel{
+  &__prop{
+    color: #898989;
+    background: #f0f0f0;
+    display: inline-block;
+    padding: 0px 5px;
+    border-radius: 15px;
+    font-size: 11px;
+    margin-right: 5px;
+  }
+}
+
+.terminalLines{
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0px;
+}
+
+.terminalLine{
+  display: flex;
+  padding: 8px 0px;
+  font-size: 12px;
+
+  div{
+    flex: 0 0 auto;
+    pointer-events: none;
+  }
+
+  &--marked, &:hover{
+    cursor: crosshair;
+    background: #5a5a5a;
+  }
+
+  &--lineNumber{
+    width: 30px;
+    text-align: right;
+    user-select: none;
+    font-weight: lighter;
+    font-size: 10px !important;
+    margin-right: 15px;
+  }
+
+  &--date{
+    text-transform: uppercase;
+    font-weight: lighter;
+    font-size: 10px !important;
+    width: 90px;
+  }
+
+  &--type{
+    font-weight: bold;
+    width: 70px;
+  }
+
+  &--output{
+    flex: 1 1 auto;
+    font-weight: bold;
+
+    .propLabel{
+      display: inline-block;
+      margin-right: 15px;
+
+      &__prop{
+        color: inherit;
+        background: #252525;
+      }
+    }
+  }
+}
+
+.sidebar{
+  position: fixed;
+  top: 0px;
+  right: -300px;
+  bottom: 0px;
+  z-index: 3;
+  &--visible{ right: 0px; }
+  transition: right ease-in .1s;
+  overflow-y: hidden;
+  word-break: break-all;
+  width: 300px;
+  background: #fff;
+  background-image: linear-gradient(to right, #fff 85%, #afafaf 150%);
+
+  &__header{
+    padding: 15px 5px;
+    border-bottom: 1px solid #f2f2f2;
+
+    &--icon{
+      height: 15px;
+      padding: 5px;
+      cursor: pointer;
+      vertical-align: middle;
+    }
+
+    &--title{
+      display: inline;
+      margin-left: 8px;
+      color: #000;
+      font-weight: bold;
+      vertical-align: middle;
+    }
+  }
+
+  &__content{
+    padding: 15px 15px;
+    font-size: 13px;
+    color: #414141;
+    line-height: 21px;
+
+    .propLabel{
+      padding: 5px 0px;
+    }
+  }
+}

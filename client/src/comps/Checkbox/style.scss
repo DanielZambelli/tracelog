@@ -1,0 +1,33 @@
+.checkbox{
+  position: relative;
+  cursor: pointer;
+
+  &__box{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 14px;
+    height: 14px;
+    background: #fff;
+    border-radius: 5px;
+    display: inline-block;
+    user-select: none;
+
+    &--checked{
+      background: #1c7be7;
+      img{
+        position: absolute;
+        top: 4px;
+        left: 2px;
+        width: 10px;
+      }
+    }
+  }
+
+  &__label{
+    display: inline-block;
+    margin-left: 18px;
+  }
+
+}
