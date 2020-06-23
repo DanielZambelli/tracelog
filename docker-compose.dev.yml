@@ -1,0 +1,38 @@
+version: '3'
+services:
+
+  postgres:
+    image: 'postgres:13-alpine'
+    environment:
+      - POSTGRES_PASSWORD=dev-yyyyyy
+
+  server:
+    build:
+      dockerfile: Dockerfile.dev
+      context: ./server
+    volumes:
+      - /app/node_modules
+      - ./server:/app
+    ports:
+      - '8080:8080'
+    depends_on:
+      - postgres
+    environment:
+      - PORT=8080
+      - DB_URL=postgresql://postgres:dev-yyyyyy@postgres/postgres
+      - SECRET=dev-xxxxxx
+
+  client:
+    build:
+      dockerfile: Dockerfile.dev
+      context: ./client
+    volumes:
+      - /app/node_modules
+      - ./client:/app
+    ports:
+      - '3000:3000'
+    depends_on:
+      - server
+    environment:
+      - REACT_APP_API=http://localhost:8080
+      - REACT_APP_SI_SECRET=MIICWwIBAAKBgQDfm74vhu9M2x1fXc+t56q77/jnV/TQ77CwC0KQmiICKwrzubWs
