@@ -1,6 +1,5 @@
 const Jwt = require('jsonwebtoken')
 const { ServiceInstances: SI } = require('../models')
-const MS_24H = 1000 * 60 * 60 * 24
 
 module.exports = async (req, res) => {
 

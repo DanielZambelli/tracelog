@@ -4,5 +4,4 @@ module.exports = (req,res) => {
     .create({ siid: req.siid, type, cat, data })
     .then(result => res.json(result))
     .catch(error => res.status(500).json(error))
-  // TODO: emit on socket
 }
