@@ -3,14 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node ./server.js",
     "dev": "npm run migrate && npm run seed && nodemon server.js",
     "migrate": "node bin/migrate.js",
-    "seed": "node bin/seed.js",
-    "docs": "jsdoc -c jsdoc.json"
+    "seed": "node bin/seed.js"
   },
-  "author": "",
+  "author": "Daniel Zambelli",
   "license": "ISC",
   "dependencies": {
     "cookie-parser": "1.4.5",
@@ -23,10 +21,5 @@
     "pg": "8.2.1",
     "pg-hstore": "2.3.3",
     "sequelize": "5.21.13"
-  },
-  "devDependencies": {
-    "jsdoc": "3.6.4",
-    "jsdoc-route-plugin": "0.1.0",
-    "minami": "1.2.3"
   }
 }
