@@ -1,12 +1,11 @@
 # Tracelog
 Tracelog is a log drain web service used by developers to capture and reduce bugs in production.
 
-When an error do occur in a system or application it is sent over to Tracelog where the bug is saved and becomes visible in the dashboard with relevant details useful for resolving and debugging the error. In other words when something does go wrong, Tracelog tracks the event so it can be prevented from happening again.
+When an error do occur in a system or application it is sent over to Tracelog where the bug is saved and made visible in the dashboard with relevant details useful for resolving and preventing the bug from happening again. 
 
-* Convenient to integrate with thru REST API including full documentation below
-* Monitor, filter, track bugs in the interactive web client
-* Safe and secure- your data is protected behind authentication wall
-* Get it as a service (contact admin) or spin up your own copy!
+* Convenient to integrate with thru REST API with documentation from below.
+* Monitor and track bugs in the interactive web client.
+* Data are secured behind authentication wall.
 
 <img src="./app.png" alt="Tracelog" width="100%" border="5" />
 
