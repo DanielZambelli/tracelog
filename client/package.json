@@ -14,7 +14,7 @@
     "redux": "4.0.5",
     "redux-thunk": "2.3.0",
     "reselect": "4.0.0",
-    "socket.io": "2.2.0",
+    "socket.io": "2.4.0",
     "socket.io-client": "2.3.0",
     "typeface-open-sans": "0.0.75",
     "whatwg-fetch": "3.0.0",
